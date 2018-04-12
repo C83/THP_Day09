@@ -9,12 +9,11 @@ def load_incubateurs
 	continue=true
 
 	while (continue==true) do
-		binding.pry
 		links = collect_links(url)
 		links.each{ |url_page|
 			name_site, url_incubateur, city = extract_data(url_page)
 			result.push({:name => name_site , :url => url_incubateur, :city => city})
-			puts {:name => name_site , :url => url_incubateur, :city => city}
+			puts result.last
 			}
 		page = Nokogiri::HTML(open(url))
 		object = page.css('.next')
