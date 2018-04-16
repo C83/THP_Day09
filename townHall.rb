@@ -36,7 +36,7 @@ end
 # Fonction get_name_email_of_val_doise
 # @params : none
 # return : 
-#   array_of_URL : un tableau avec les URLs des pages de mairie
+#   result : un tableau avec les noms des communes et les adresses associées
 def get_name_email_of_val_doise
 	result = []
 	# On récupère la liste des URLs des pages de chaque ville
